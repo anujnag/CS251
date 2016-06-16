@@ -1,0 +1,40 @@
+#!/usr/bin/octave -qf
+%Anuj Nagpal - 14116
+%CS251 - Assignment 7 - Question 1
+
+filename="averages.txt";  %Output file
+fid = fopen (filename, "w");
+
+die_face = [1:6];
+prob_die1=[1/6 1/6 1/6 1/6 1/6 1/6];
+prob_die2=[1/6-0.025 1/6-0.025 1/6-0.025 1/6-0.025 1/6+0.05 1/6+0.05];
+prob_die3=[1/6-0.05 1/6-0.05 1/6-0.05 1/6-0.05 1/6+0.1 1/6+0.1];
+
+for j=1:4
+	sample_size=10^j;
+	avg_die1_throw1(j)=0;
+	avg_die1_throw2(j)=0;
+	avg_die2_throw1(j)=0;
+	avg_die2_throw2(j)=0;
+	avg_die3_throw1(j)=0;
+	avg_die3_throw2(j)=0;
+	for i=1:sample_size
+		set(1,:,i,j)=discrete_rnd(die_face,prob_die1,1,2);
+		set(2,:,i,j)=discrete_rnd(die_face,prob_die2,1,2);
+		set(3,:,i,j)=discrete_rnd(die_face,prob_die3,1,2);
+		avg_die1_throw1(j)=avg_die1_throw1(j)+(set(1,1,i,j)/sample_size);
+		avg_die1_throw2(j)=avg_die1_throw2(j)+(set(1,2,i,j)/sample_size);
+		avg_die2_throw1(j)=avg_die2_throw1(j)+(set(2,1,i,j)/sample_size);
+		avg_die2_throw2(j)=avg_die2_throw2(j)+(set(2,2,i,j)/sample_size);
+		avg_die3_throw1(j)=avg_die3_throw1(j)+(set(3,1,i,j)/sample_size);
+		avg_die3_throw2(j)=avg_die3_throw2(j)+(set(3,2,i,j)/sample_size);
+	end
+end
+fprintf(fid,"#    Set Size = 10              Set Size = 100             Set Size = 1000           Set Size = 10000\n");
+fprintf(fid,"#      Throw 1   Throw 2	  Throw 1   Throw 2          Throw 1   Throw 2          Throw 1   Throw 2\n");
+fprintf(fid,"Die1  %f  %f   Die1  %f  %f   Die1  %f  %f   Die1  %f  %f\n",avg_die1_throw1(1),avg_die1_throw2(1),avg_die1_throw1(2),avg_die1_throw2(2),avg_die1_throw1(3),avg_die1_throw2(3),avg_die1_throw1(4),avg_die1_throw2(4));
+
+fprintf(fid,"Die2  %f  %f   Die2  %f  %f   Die2  %f  %f   Die2  %f  %f\n",avg_die2_throw1(1),avg_die2_throw2(1),avg_die2_throw1(2),avg_die2_throw2(2),avg_die2_throw1(3),avg_die2_throw2(3),avg_die2_throw1(4),avg_die2_throw2(4));
+
+fprintf(fid,"Die3  %f  %f   Die3  %f  %f   Die3  %f  %f   Die3  %f  %f\n",avg_die3_throw1(1),avg_die3_throw2(1),avg_die3_throw1(2),avg_die3_throw2(2),avg_die3_throw1(3),avg_die3_throw2(3),avg_die3_throw1(4),avg_die3_throw2(4));
+fclose(fid);

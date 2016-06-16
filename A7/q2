@@ -1,0 +1,27 @@
+#!/usr/bin/gnuplot 
+#Anuj Nagpal 14116
+#CS251 - Assignment 7 - Question 2
+
+set terminal png
+set output 'output2.png'
+set boxwidth 0.8 absolute
+set style fill solid 1.00 noborder
+set grid layerdefault   lt 0 linewidth 0.500,  lt 0 linewidth 0.500
+show grid
+set key bmargin center horizontal Left reverse noenhanced autotitle
+set style histogram rowstacked title textcolor lt -1 offset character 0, 1, 0
+set datafile missing '-'
+set style data histograms
+set xtics rotate by -45  autojustify
+set xtics norangelimit font ",8"
+set ytics norotate autojustify
+set ytics 0,1,10 font ",8"
+set title "Averages of each throw of each dice for 4 sample sizes" 
+set xlabel "Histogram for 4 sample sizes" 
+set xlabel  offset character 0, -2, 0 textcolor lt -1
+set ylabel "Average value of the outcome"
+set yrange [0:10] 
+plot newhistogram "Sample of 10", 'averages.txt' using 2:xtic(1) t "Throw 1", '' u 3 t "Throw 2", \
+     newhistogram "Sample of 100", '' u 5:xtic(4) t "Throw 1", '' u 6 t "Throw 2", \
+     newhistogram "Sample of 1000", '' u 8:xtic(7) t "Throw 1", '' u 9 t "Throw 2", \
+     newhistogram "Sample of 10000", '' u 11:xtic(10) t "Throw 1", '' u 12 t "Throw 2"
