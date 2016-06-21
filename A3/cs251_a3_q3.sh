@@ -5,6 +5,7 @@
 if [[ -z $1 ]]; then #check for arguments
 	echo "Please enter the file names"
 else
+filename=$1
 awk 'BEGIN {
 FS=",[ ]*"; OFS=","
 }
@@ -16,5 +17,5 @@ printf "%s", OFS;
 }
 }
 printf "\n"
-}' $1 
+}' $filename 
 fi
