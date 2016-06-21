@@ -1,0 +1,21 @@
+body {
+        background-color: orange;
+}
+
+h1 {
+        color: purple;
+        margin: 30px;
+        font-family: Times New Roman;
+        text-align: center;
+}
+
+form {
+        text-align: center;
+}
+
+input {
+        color: green;
+        font-size: 120%;
+        font-family: courier;
+        font-style: bold;
+}

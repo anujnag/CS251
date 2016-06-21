@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="insertpage.css">
+<title>
+Insert Entries
+</title>
+</head>
+
+<body>
+<h1>Insert an entry into Students Table</h1>
+<form action="insert_action_students.php" method="post">
+  Roll Number:<br>
+  <input type="number" name="students_rollno"><br>
+  Name:<br>
+  <input type="text" name="students_name"><br>
+  Department:<br>
+  <input type="text" name="students_dept"><br>
+  <input type="submit" value="Submit"><br>
+</form>
+
+<h1>Insert an entry into Faculty Table</h1>
+<form action="insert_action_faculty.php" method="post">
+  Faculty ID:<br>
+  <input type="number" name="facultyid"><br>
+  Faculty Name:<br>
+  <input type="text" name="facultyname"><br>
+  <input type="submit" value="Submit"><br>
+</form>
+
+<h1>Insert an entry into Courses Table</h1>
+<form action="insert_action_courses.php" method="post">
+  Course ID:<br>
+  <input type="number" name="courseid"><br>
+  Course Name:<br>
+  <input type="text" name="coursename"><br>
+  Faculty ID:<br>
+  <input type="number" name="facultyid"><br>
+  Credits:<br>
+  <input type="number" name="credits"><br>
+  <input type="submit" value="Submit"><br>
+</form>
+
+<h1>Insert an entry into Enrollment Table</h1>
+<form action="insert_action_enrollment.php" method="post">
+  Roll Number:<br>
+  <input type="number" name="rollnumber"><br>
+  Course ID:<br>
+  <input type="number" name="courseid"><br>
+  Assignment Marks:<br>
+  <input type="number" name="assmarks"><br>
+  Quiz Marks:<br>
+  <input type="number" name="quizmarks"><br>
+  Mid Sem Marks:<br>
+  <input type="number" name="midsemmarks"><br>
+  End Sem Marks:<br>
+  <input type="number" name="endsemmarks"><br>
+  <input type="submit" value="Submit"><br>
+</form>
+</body>
+
+</html>

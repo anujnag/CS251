@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="querypage.css">
+<title>
+Query Page
+</title>
+</head>
+
+<body>
+<div>
+<h1>Total Number of Students in a Course</h1>
+<form action="queryone_action.php" method="post">
+  Find the total number of students enrolled in the course which has Course ID <select name="queryone_courseid">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option></select><br>
+  <input type="submit" value="Submit"><br>
+</form>
+</div>
+
+<div>
+<h1>Aggregate Marks</h1>
+<form action="querytwo_action.php" method="post">
+ Find the aggregate of <select name="querytwo_exam">
+ <option value="ASSIGNMENT_MARKS">Assignment Marks</option>
+ <option value="QUIZ_MARKS">Quiz Marks</option>
+ <option value="MIDSEM_MARKS">Mid Sem Marks</option>
+ <option value="ENDSEM_MARKS">End Sem Marks</option>
+ <option value="TOTAL">Total</option>
+ </select> in Course ID <select name="querytwo_courseid">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option></select><br>
+<input type="submit" value="Submit"><br>
+</form>
+</div>
+
+<div>
+<h1>See the Complete Table</h1>
+<form action="querythree_action.php" method="post">
+ Select the table you want to see:
+ <select name="querythree">
+ <option value="Students">Students</option>
+ <option value="Courses">Courses</option>
+ <option value="Faculty">Faculty</option>
+ <option value="Enrollment">Enrollment</option>
+<input type="submit" value="Submit"><br>
+</form>
+</div>
+
+</body>
+
+</html>
