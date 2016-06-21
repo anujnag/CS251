@@ -1,0 +1,14 @@
+#!/bin/bash
+#CS251_Assignment-1 _Question-1
+#Anuj Nagpal - 14116
+
+if  [[ -z $1 ]]; then
+	echo "Please enter a name as an argument"
+else
+	echo -n "Namaskar, "   #-n so that a newline is not printed after echo
+	for var in "$@"     #considers all the argument parameters as one name
+	do
+		echo -n  "$var "
+	done
+echo ""
+fi
