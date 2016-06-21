@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Bash}{3}{0}{1}
+\beamer@sectionintoc {2}{Octave}{11}{0}{2}
+\beamer@sectionintoc {3}{\LaTeX {}}{16}{0}{3}
+\beamer@sectionintoc {4}{Gnuplot}{21}{0}{4}
+\beamer@sectionintoc {5}{xfig}{26}{0}{5}
+\beamer@sectionintoc {6}{HTML}{31}{0}{6}
+\beamer@sectionintoc {7}{Git and Bitbucket}{38}{0}{7}

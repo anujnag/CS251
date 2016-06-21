@@ -1,0 +1,330 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{imakeidx}
+\usepackage[nottoc,numbib]{tocbibind}
+
+%To set the page margins
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,}
+
+\title{CS251 Assignment 10 : How to learn git, octave, latex, gnuplot, xfig, html, git and bitbucket}
+\author{Anuj Nagpal - 14116\\
+\and
+Sachin Kumar-13594\\
+\and
+Dhawal Upadhyay-14218\\
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\begin{center}
+\section{\underline{Bash}}
+\end{center}
+
+Bash is the GNU Project's shell. Bash is the Bourne Again SHell. Bash is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh). 
+A working knowledge of shell scripting is essential to anyone wishing to become reasonably proficient at system administration.
+\subsection{Why shell scripting ?}
+	\begin{itemize}
+	\item Shell script can take input from user, file and output them on screen.
+	\item Useful to create our own commands.
+	\item Save lots of time.
+	\item To automate some tasks of day to day life.
+	\item System Administration part can be also automated.
+	\end{itemize}
+
+\subsection{How to write shell a script ?}
+\begin{itemize}
+\item Use any editor like vi or Gedit to write shell script.
+\item After writing shell script set execute permission for your script. \\
+	examples:\\
+	\$chmod +x your-script-name	\\
+	\$chmod 755 your-script-name
+\end{itemize}
+
+Your bash script must start with \#!/bin/bash. It is called a shebang, it tells the shell what program to interpret the script with, when executed. Here the script is to be interpreted and run by the bash shell.
+
+Now execute your script with syntax:
+\begin{itemize}
+\item bash your-script-name OR
+\item sh your-script-name OR
+\item ./your-script name
+\end{itemize}
+
+\
+
+\underline{Examples:} \\
+\begin{itemize}
+\item \$ bash scriptname
+\item \$ sh scriptname
+\item \$./scriptname.sh
+\end{itemize}
+
+\subsection{Variables}
+You can use variables as in any programming languages. There are no data types. A variable in bash can contain a number, 
+a character, a string of characters.You have no need to declare a variable, just assigning a value to its reference will create it. \\
+
+$>$ Hello World ! using variables:\\
+
+ \noindent \#!/bin/bash \\         
+ STR="Hello World!" \\
+ echo \textdollar STR  \\
+ 
+\subsection{Some Useful Commands} 
+\subsubsection{sed(stream editor)}
+Sed is a non-interactive editor. Instead of altering a file by moving the
+cursor on the screen, you use a script of editing instructions to sed, plus the name of the file to edit. You can also describe sed as a filter.
+
+\subsubsection{awk}
+AWK scans for a pattern, and for every matching pattern a action will
+be performed.Helpful in manipulation of datafiles, text retrieval and processing
+ 
+\subsubsection{grep}
+Prints lines matching a search pattern
+
+\subsubsection{sort}
+Sorts lines of text files
+
+\subsubsection{pipes ( $\mid$ )}
+Pipes let you use the output of a program as the input of another one.
+
+\
+
+For complete reference: \\
+https://www.gnu.org/software/bash/manual/bashref.html
+
+\begin{center}
+\section{\underline{Octave}}
+\end{center}
+
+\subsection{What is Octave ?}
+GNU Octave is software featuring a high-level programming language, primarily intended for numerical computations. It provides a command-line interface for solving linear and nonlinear problems numerically, and for performing other numerical experiments using a language that is mostly compatible with MATLAB. It may also be used as a batch-oriented language. It is part of the GNU Project, it is free software under the terms of the GNU General Public License.
+
+If you are running Linux or OSX then you will find binaries for Octave on the Octave site. Windows binaries are a little more difficult to find in an easy-to-use form. There is a binary that you can install by extracting a compressed file to the correct directories, or you can use the Windows installer version available in our codebin. The Windows installer version isn't quite up-to-date but it is perfectly OK for learning Octave and it is the version used on the Coursera Machine Learning course.
+
+Programming in Octave is slightly different from most languages - as it is a persistent programming environment. What this means is that you work at a command prompt and any variables you create persist for the session. Anything you type is evaluated as soon as you press the return key and the result is displayed - unless you finish the line with a semi-colon when the output is suppressed.\\
+
+
+The simplest way to use Octave is just to type mathematical commands at the prompt,
+like a normal calculator.  All of the usual arithmetic expressions are recognised.  For
+example, type \\
+octave:\#\# $>$ 2+2 \\
+at the prompt and press return, and you should see \\
+ans = 4
+
+\subsection{Producing Graphical Output}
+The plot function allows you to create simple x-y plots with linear axes. For example,\\
+x = -10:0.1:10; \\
+plot (x, sin (x));
+
+\
+
+For Complete Reference of Octave:
+https://www.gnu.org/software/octave/octave.pdf
+
+\begin{center}
+\section{\underline{\LaTeX{}}}
+\end{center}
+
+\subsection{What is \LaTeX{} ?}
+\TeX{} is a computer program created by Donald E. Knuth. It is aimed at typesetting text and mathematical formulae. \LaTeX{} enables authors to typeset and print their work at the highest typographical quality, using a predefined, professional layout. It uses the \TeX{} formatter as its typesetting engine.
+
+\subsection{How to create a \LaTeX{} file}
+The input for \LaTeX{} is a plain text file. It contains the text of the document, as well as the commands that tell \LaTeX{} how to typeset the text. Save the file with a .tex extension.
+
+\subsection{Compiling}
+$>$ latex mydocument.tex \\
+This will create "mydocument.dvi", a DVI document \\
+$>$ pdflatex mydocument.tex \\
+This will generate "mydocument.pdf", a PDF document
+
+\newpage
+
+\subsection{A simple \LaTeX{} document example:}
+\textbackslash documentclass\{article\} \\
+\textbackslash begin\{document\}\\
+\textbackslash title\{Introduction\}\\
+\textbackslash author\{Author's Name\}\\
+\textbackslash maketitle \\
+\textbackslash begin\{section\} \\
+My name is Anuj Nagpal. \\
+\textbackslash end\{section\} \\
+\textbackslash end\{document\}
+
+\subsection{Packages}
+While writing your document, you will probably find that there are some
+areas where basic L A TEX cannot solve your problem. If you want to include
+graphics, coloured text or source code from a file into your document, you
+need to enhance the capabilities of L A TEX. Such enhancements are called
+packages.
+
+\
+
+For complete reference regarding \LaTeX{}:
+https://latex-project.org/guides/
+		
+\begin{center}
+\section{\underline{Gnuplot}}
+\end{center}	
+
+Gnuplot is a free, command-driven, interactive, function and data plotting program. In general, any mathematical expression accepted by C, FORTRAN, Pascal, or BASIC may be plotted. \\
+
+\subsection{The plot AND splot COMMANDS}
+plot and splot are the primary commands in Gnuplot. They plot functions and data in many many ways. plot is used to plot 2-d functions and data, while splot plots 3-d surfaces and data. For example, \\
+	gnuplot$>$  plot sin(x)/x  \\
+    gnuplot$>$  splot sin(x*y/20)\\
+
+Official documentation available at: http://www.gnuplot.info/docs\_4.2/gnuplot.html	
+	
+\subsection{Help required ?}
+Firstly, read gnuplot built-in documentation available by the help command, with optional
+topics like help plot, help datafile, help functions, help palette, help x11, etc. It this does not help your, you can have a look to gnuplot demos in the ”demo/” directory.
+
+\subsection{Still cannot figure out your problem ?}
+Then check out :
+\begin{itemize}
+\item There is a mailing list gnuplot-info@lists.sourceforge.net for user-related questions and discussions. (Archived at gmane and nabble forums).
+\item There is also a newsgroup - comp.graphics.apps.gnuplot.
+\item And there is a wiki-style discussion forum about gnuplot too which you can google.
+\end{itemize}
+\
+There is also a Support section on gnuplot's sourceforge site, but not as lively answered as by using mailing lists or news.
+\
+The developers' mailing is at gnuplot-beta@lists.sourceforge.net is suitable for issues related to building and developing gnuplot.
+
+\begin{center}
+\section{\underline{Xfig}}
+\end{center}
+
+Xfig is an interactive drawing tool which runs under X Window System Version 11 Release 4 (X11R4) or later, on most UNIX-compatible platforms, and e.g. under 
+Darwin on the MacIntosh and any X server under Microsoft Windows.\\
+
+\subsection{Functionalities}
+In xfig, figures may be drawn using objects such as circles, boxes, lines, spline curves, text, etc. It is also possible to import images in formats such as GIF, JPEG, EPSF (PostScript), etc. Those objects can be created, deleted, moved or modified. 
+Attributes such as colors or line styles can be selected in various ways.
+
+\subsection{What's more !}
+There are some applications which can produce output in the Fig format. For example, xfig doesn't have a facility to create graphs, but tools such as gnuplot or xgraph can create graphs and export them in Fig format. Even if your favorite application can't generate output for xfig, tools such as pstoedit or hp2xx may allow you to read and edit those figures with xfig. If you want to import images into the figure but you don't need to edit the image itself , it is also possible to import images in formats such as GIF, JPEG, EPSF (PostScript), etc.
+
+\subsection{How to learn ?}
+There is a complete user manual available at $http://xfig.org/userman/$. Colourful images are also included wherever required.
+
+\begin{center}
+\section{\underline{HTML}}
+\end{center}
+HTML is a markup language for describing web documents (web pages). \\
+	\begin{itemize}
+	\item HTML stands for Hyper Text Markup Language.
+	\item A markup language is a set of markup tags.
+	\item HTML documents are described by HTML tags.
+	\item Each HTML tag describes different document content.
+	\end{itemize}
+
+\newpage
+
+\subsection{A basic HTML document}
+$<$!DOCTYPE html$>$ \\
+$<$html$>$ \\
+$<$head$>$ \\
+$<$title$>$Page Title$<$/title$>$ \\
+$<$/head$>$ \\
+$<$body$>$ \\
+
+$<$h1$>$My First Heading$<$/h1$>$ \\
+$<$p$>$My first paragraph.$<$/p$>$ \\
+
+$<$/body$>$ \\
+$<$/html$>$ \\
+
+\subsubsection{DOCTYPE}
+The DOCTYPE declaration defines the document type to be HTML
+
+\subsubsection{$<$html$>$}
+The text between $<$html$>$ and $<$/html$>$ describes an HTML document
+
+\subsubsection{$<$head$>$}
+The text between $<$head$>$ and $<$/head$>$ provides information about the document
+
+\subsubsection{$<$title$>$}
+The text between $<$title$>$ and $<$/title$>$ provides a title for the document	
+	
+\subsubsection{$<$body$>$}
+The text between $<$body$>$ and $<$/body$>$ provides a title for the document
+
+\subsubsection{$<$h1$>$}
+The text between $<$h1$>$ and $<$/h1$>$ describes a heading
+
+\subsubsection{$<$p$>$}
+The text between $<$p$>$ and $<$/p$>$ describes a paragraph \\
+
+http://www.w3schools.com/html/ is an excellent site to learn such HTML tags. With their online HTML editor, you can edit the HTML, and click on a button to view the result.
+
+\newpage
+
+\begin{center}
+\section{\underline{Git and Bitbucket}}
+\end{center}
+
+\subsection{Git}
+Git is a mature, actively maintained open source project originally developed in 2005 by Linus Torvalds, the famous 
+creator of the Linux operating system kernel. A staggering number of software projects rely on Git for version control,
+including commercial projects as well as open source.
+
+\subsubsection{Installation - Git}
+\begin{itemize}
+\item Open a terminal on your local system and type the following: \$ sudo apt-get install git
+\item Verify the installation was successful by typing which git at the command line: \$ which git /opt/local/bin/git
+\item Configure your username using the following command: \$ git config –global user.name
+”Emma Paris”
+\item Configure your email address using the following command: \$ git config –global user.email ”eparis@iitk.ac.in”
+\end{itemize}
+
+\subsubsection{Advantages of Git}
+\begin{itemize}
+\item Free and open source: Git is released under GPLs open source license. It is available freely over the internet.
+\item Fast and small: As most of the operations are performed locally, it gives a
+huge benefit in terms of speed.
+\item Implicit backup: The chances of losing data are very rare when
+there are multiple copies of it.
+\item Security:Git uses a common cryptographic hash function called
+secure hash function (SHA1), to name and identify objects within its database. Every file and commit is check-summed and retrieved by its checksum at the time of checkout.
+\end{itemize}
+
+\subsection{Bitbucket}
+Bitbucket is a vast open space filled with star users, systems that provide a home for your code, and pull requests shooting towards you like asteroids !
+
+\subsubsection{Where to go ?}
+\begin{itemize}
+\item First you have to Sign up for Bitbucket Cloud: To start using Bitbucket Cloud, you’ll need an Atlassian account. If you don’t have one already, we’ll help you create one when you sign up for Bitbucket.
+\item Create and clone a repository: If you’re starting from scratch and have no files, you can simply create a repository on Bitbucket Cloud and then clone it to your local system. This cloning action connects your remote Bitbucket repo to your specified local directory.
+\item Add a file to your local repository and put it on Bitbucket.
+\end{itemize}
+
+\subsection{Reference Material}
+Git Official Documentation available at: \\
+https://git-scm.com/documentation \\
+\& \\
+Bitbucket's Documentation is available at: \\
+https://confluence.atlassian.com/bitbucket/bitbucket-cloud-documentation-home-221448814.html \\
+Otherwise google is always your friend.
+
+\begin{center}
+Thanks !
+\end{center}
+
+\end{document}
