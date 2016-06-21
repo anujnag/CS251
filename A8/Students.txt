@@ -1,0 +1,22 @@
+ROLL_NO     NAME                  CS251_GRADE  CS210_GRADE  CS220_GRADE
+----------  --------------------  -----------  -----------  -----------
+14116       Anuj Nagpal           A            A            A          
+14026       Abhishek Verma        C            A            C          
+14114       Anubhav Shrivastava   B            B            C          
+14429       Nikhil Vanjani        A            C            A          
+14433       Nishit Asnani         B            B            B          
+14443       Pallav Agarwal        B            B            B          
+14588       Saksham Sharma        C            C            A          
+14805       Vinayak Tantia        C            C            C          
+14342       Kunal Chaturvedi      B            B            B          
+14418       Nayan Deshmukh        C            C            C          
+14013       Abhinav Garg          B            C            A          
+14644       Shibhansh Dohare      B            B            B          
+14746       Talla Aravind Reddy   C            B            B          
+14330       Kshitiz Singhal       A            A            A          
+14258       Gurkirat Singh        A            A            A          
+14449       Parth Sharma          C            B            B          
+14519       Rahul Gupta           B            A            C          
+14708       Srishti Jain          B            B            B          
+14745       Shivam Taji           A            C            B          
+14103       Ankit Gupta           A            A            C          

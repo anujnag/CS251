@@ -1,0 +1,5 @@
+COURSE      INSTRUCTOR            CREDITS     STUDENTS  
+----------  --------------------  ----------  ----------
+CS251       Arnab Bhattacharya    6           20        
+CS210       Surendra Baswana      12          20        
+CS220       Ajai Jain             12          20        
